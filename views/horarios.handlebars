@@ -1,0 +1,37 @@
+{{#each horarios}}
+    <div class="card card-body mb-2">
+        <h4>{{dataMoment}}</h4>
+        <strong>Horário de entrada: </strong><p>{{horario}} horas</p>
+
+        <!-- Method Override -->
+        <form method="post" action="horarios/{{id}}?_method=DELETE">
+            <!-- Method Override -->
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="submit" class="btn btn-danger btn-block" value="Delete">
+        </form>
+    </div>
+
+{{else}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 text-center">
+
+                <div class="card">
+                    <h3 class="card-header">KCETADA.</h3>
+                    <img style="height: 300px; width: 100%; display: block;" src="/images/goku.gif" alt="Card image">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Não tem nada por aqui, broder. Preguiçoso pra caralho tu heim.
+                        </p>
+                        <a class="btn btn-primary" href="/">Adiciona algo lá, fi!</a>
+                    </div>
+                </div>
+                <!--
+                <!-- Imagem 
+                <img src="/images/goku.gif" alt="goku" />
+                <p>Não tem nada por aqui, broder. Preguiçoso pra caralho tu heim.</p>
+                <a class="btn btn-primary" href="/">Adiciona algo lá, fi!</a> -->
+            </div>
+        </div>
+    </div>
+{{/each}}
