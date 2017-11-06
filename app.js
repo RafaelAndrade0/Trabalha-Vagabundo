@@ -22,7 +22,8 @@ app.set('view engine', 'handlebars');
 mongoose.Promise = global.Promise;
 
 // Connect to mongoose
-mongoose.connect('mongodb://localhost/horarios-app', {
+mongoose.connect('mongodb://admin:kurisu1039@ds149905.mlab.com:49905/tra_vag_db', {
+//mongoose.connect('mongodb://localhost/horarios-app', {
     useMongoClient: true
 })
     .then(() => console.log('MongoDb Connected...'))
@@ -112,7 +113,7 @@ app.delete('/horarios/:id', (req, res) => {
 });
 
 
-const port = 3000;
+const port = 3000 || process.env.PORT;
 
 app.listen(port, () => {
   console.log(`Ouvindo a porta ${port}`);
