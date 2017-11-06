@@ -1,4 +1,5 @@
 # Trabalha-Vagabundo
+![](public/images/sleep.png)
 Um WebApp feito para treinar conceitos do NodeJs/Express. Utiliza o template Handlebars! :)
 O app basicamente só registra o horário de entrada do funcionário e o armazena no banco de dados local do MongoDb.
 
