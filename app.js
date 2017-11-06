@@ -61,7 +61,7 @@ app.get('/horarios', (req, res) => {
 });
 
 // Process Post
-app.post('/', (req, res) => {
+/*app.post('/', (req, res) => {
   console.log(req.body.selectOption);
   //console.log('hey');
   const novoHorario = {
@@ -74,17 +74,25 @@ app.post('/', (req, res) => {
       res.redirect('/horarios')
     }) 
 
-});
+});*/
 
 
-/*app.post('/', (req, res) => {
+app.post('/', (req, res) => {
   console.log(req.body.horasOption);
   console.log(req.body.minutosOption);
 
+  let convertToInt = parseInt(req.body.horasOption);
+  convertToInt += 4;
+
   const novoHorario = {
-    horaChega: req.body.horasOption,
-    minutoChega: req.body.minutosOption
+    /* Tem que ter o mesmo nome dos objetos definidos no (Horário.js). 
+    A database do MongoDb */
+    horarioHora: req.body.horasOption,
+    horarioMinuto: req.body.minutosOption,
+    horarioSaida: convertToInt
   }
+
+  //console.log(novoHorario.horarioHora);
 
   new Horario(novoHorario)
     .save()
@@ -92,7 +100,7 @@ app.post('/', (req, res) => {
       res.redirect('/horarios')
     })
 
-});*/
+});
 
 // Deletar Horário
 app.delete('/horarios/:id', (req, res) => {

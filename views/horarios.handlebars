@@ -1,7 +1,15 @@
 {{#each horarios}}
     <div class="card card-body mb-2">
         <h4>{{dataMoment}}</h4>
-        <strong>Horário de entrada: </strong><p>{{horario}} horas</p>
+        <strong> Horário de entrada: </strong>
+        <p>
+            Tu chegou as {{horarioHora}} horas e {{horarioMinuto}} minutos
+        </p>
+
+        <strong> Horário de Saída: </strong>
+        <p>
+            Tu só vai sair as {{horarioSaida}}:{{horarioMinuto}}  ):
+        </p>
 
         <!-- Method Override -->
         <form method="post" action="horarios/{{id}}?_method=DELETE">

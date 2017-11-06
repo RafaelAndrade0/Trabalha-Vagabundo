@@ -6,10 +6,21 @@ moment.locale('pt-BR');
 
 // Criando Schema
 const horariosSchema = new Schema({
-  horario: {
+  horarioHora: {
     type: Number,
     required: true
   },
+  horarioMinuto: {
+    type: Number,
+    required: true
+  },
+
+  // Novo Objeto
+  horarioSaida: {
+    type: Number,
+    required: true
+  },
+
   data: {
     type: Date,
     default: Date.now
