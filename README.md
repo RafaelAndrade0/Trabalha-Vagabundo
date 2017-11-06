@@ -6,7 +6,7 @@ O app basicamente só registra o horário de entrada do funcionário e o armazen
 :sweat: **Lista do que fazer:** 
 
 - [x] Registrar o horário de saída do funcionário
-- [ ] Configurar o mongoDb no mLab
-- [ ] Fazer o deployment do APP no Heroku
+- [x] Configurar o mongoDb no mLab
+- [x] Fazer o deployment do APP no Heroku
 - [ ] Organizar o visual
 - [ ] Limpar o código :neutral_face:
